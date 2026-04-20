@@ -8,7 +8,10 @@ interface Props {
   description?: string;
 }
 
-const { title = "Your New Business", description = "An app that combines knowledge of all of your travel points and knowledge of all flight flights and hotels and gives you a daily deal that is very customized to the point points that you have to your name and takes into account the best ways to transfer points to achieve that deal" } = Astro.props;
+const {
+  title = "Pointara — Your Points, One Perfect Deal, Every Single Day",
+  description = "Pointara reads your exact loyalty balances across Chase, Amex, Citi, airlines, and hotels — runs the transfer math — and surfaces one curated, bookable award deal each day, personalised to what you actually hold."
+} = Astro.props;
 ---
 <!doctype html>
 <html lang="en" class="scroll-smooth">
@@ -18,18 +21,26 @@ const { title = "Your New Business", description = "An app that combines knowled
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0F1C2E" />
     <title>{title}</title>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Your New Business",
-      "description": "An app that combines knowledge of all of your travel points and knowledge of all flight flights and hotels and gives you a daily deal that is very customized to the point points that you have to your name and takes into account the best ways to transfer points to achieve that deal",
-      "url": "https://points-travel-deals.onrender.com"
+      "@type": "SoftwareApplication",
+      "name": "Pointara",
+      "description": "Travel points optimizer that reads your exact loyalty balances and surfaces one personalized daily award deal — no searching required.",
+      "applicationCategory": "TravelApplication",
+      "url": "https://points-travel-deals.onrender.com",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
     }
     </script>
   </head>
-  <body class="min-h-screen flex flex-col bg-surface-50 text-surface-900 font-body antialiased">
+  <body class="min-h-screen flex flex-col font-body antialiased" style="background-color: oklch(0.13 0.025 240); color: oklch(0.88 0.010 75);">
     <Header />
     <main class="flex-1">
       <slot />

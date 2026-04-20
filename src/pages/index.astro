@@ -1,35 +1,679 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="Your New Business" description="An app that combines knowledge of all of your travel points and knowledge of all flight flights and hotels and gives you a daily deal that is very customized to the point points that you have to your name and takes into account the best ways to transfer points to achieve that deal">
-  <!-- Hero — the Product Agent will replace this entire page -->
-  <section class="relative min-h-[80vh] flex items-center overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-brand-500/5 via-surface-50 to-brand-500/10"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 text-center">
-      <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-surface-900 font-display max-w-4xl mx-auto leading-[1.1] animate-slide-up">
-        Your New Business
-      </h1>
-      <p class="mt-6 text-lg md:text-xl text-surface-800/60 max-w-2xl mx-auto leading-relaxed animate-slide-up delay-100">
-        An app that combines knowledge of all of your travel points and knowledge of all flight flights and hotels and gives you a daily deal that is very customized to the point points that you have to your name and takes into account the best ways to transfer points to achieve that deal
-      </p>
-      <div class="mt-10 animate-slide-up delay-200">
-        <a href="#cta" class="inline-block px-8 py-3.5 bg-brand-500 text-white font-semibold rounded-lg hover:bg-brand-600 transition-colors text-base">
-          Get Started
-        </a>
+<Base
+  title="Pointara — Your Points, One Perfect Deal, Every Single Day"
+  description="Pointara reads your exact loyalty balances, runs the transfer math, and surfaces the one best trip you can book right now. No searching required."
+>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       HERO — Asymmetric layout, deal card as centrepiece
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section class="relative min-h-[100svh] flex items-center overflow-hidden grain-overlay" style="background-color: oklch(0.13 0.025 240);">
+
+    <!-- Layered gradient lighting -->
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <!-- Primary amber glow — upper left -->
+      <div style="
+        position: absolute;
+        top: -10%;
+        left: -5%;
+        width: 65%;
+        height: 70%;
+        background: radial-gradient(ellipse at 30% 30%, oklch(0.72 0.16 70 / 0.12) 0%, transparent 65%);
+        filter: blur(2px);
+      "></div>
+      <!-- Deep blue sweep — lower right -->
+      <div style="
+        position: absolute;
+        bottom: -15%;
+        right: -10%;
+        width: 70%;
+        height: 75%;
+        background: radial-gradient(ellipse at 70% 70%, oklch(0.28 0.06 240 / 0.35) 0%, transparent 60%);
+      "></div>
+      <!-- Subtle conic sweep across centre -->
+      <div style="
+        position: absolute;
+        inset: 0;
+        background: conic-gradient(from 200deg at 60% 45%, oklch(0.20 0.04 240 / 0.4) 0deg, transparent 60deg, transparent 300deg, oklch(0.20 0.04 240 / 0.4) 360deg);
+      "></div>
+      <!-- Horizon glow at bottom to bleed into next section -->
+      <div style="
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 180px;
+        background: linear-gradient(to bottom, transparent, oklch(0.13 0.025 240));
+      "></div>
+    </div>
+
+    <!-- Content grid -->
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 py-24 md:py-32">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-10 items-center">
+
+        <!-- Left: Headline + CTA -->
+        <div class="max-w-xl">
+          <!-- Kicker -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-brand-500/30 bg-brand-500/8 mb-7 animate-fade-in" style="background-color: oklch(0.72 0.16 70 / 0.08);">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span>
+            <span class="text-xs font-medium tracking-wide uppercase" style="color: oklch(0.82 0.12 72);">Daily award deals — live now</span>
+          </div>
+
+          <!-- Headline — DM Serif italic for editorial luxury -->
+          <h1 class="font-display text-5xl sm:text-6xl lg:text-[4.25rem] leading-[1.05] tracking-tight animate-slide-up delay-100" style="color: oklch(0.96 0.006 75); font-style: italic; font-weight: 400;">
+            Your Points,<br>
+            <span style="color: oklch(0.78 0.14 70);">One Perfect Deal,</span><br>
+            Every Single Day
+          </h1>
+
+          <!-- Sub -->
+          <p class="mt-6 text-lg leading-relaxed animate-slide-up delay-200" style="color: oklch(0.70 0.018 235); max-width: 38ch;">
+            Pointara reads your exact balances, runs the transfer math, and surfaces the one best trip you can book right now — no searching required.
+          </p>
+
+          <!-- CTAs -->
+          <div class="mt-10 flex flex-col sm:flex-row gap-3 animate-slide-up delay-300">
+            <a href="#cta" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+               style="background-color: oklch(0.72 0.16 70); color: oklch(0.13 0.025 240); box-shadow: 0 4px 24px oklch(0.72 0.16 70 / 0.35);">
+              Claim my early access
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#how-it-works" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-medium text-sm border transition-colors duration-200"
+               style="border-color: oklch(0.96 0.006 75 / 0.15); color: oklch(0.88 0.010 75); background: oklch(0.96 0.006 75 / 0.04);">
+              See how it works
+            </a>
+          </div>
+
+          <!-- Micro proof -->
+          <p class="mt-5 text-xs animate-fade-in delay-400" style="color: oklch(0.55 0.015 235);">
+            No credit card required · Connects Chase, Amex, Citi, airlines &amp; hotels
+          </p>
+        </div>
+
+        <!-- Right: Today's Deal card -->
+        <div class="flex justify-center lg:justify-end animate-slide-right delay-300">
+          <div class="w-full max-w-sm relative">
+            <!-- Card ambient glow layer -->
+            <div style="
+              position: absolute;
+              inset: -24px;
+              background: radial-gradient(ellipse at 50% 50%, oklch(0.72 0.16 70 / 0.14) 0%, transparent 65%);
+              filter: blur(8px);
+              z-index: 0;
+            "></div>
+
+            <!-- Today's Deal Card -->
+            <div class="relative z-10 rounded-2xl overflow-hidden animate-glow-pulse"
+                 style="background: oklch(0.18 0.028 238); border: 1px solid oklch(0.72 0.16 70 / 0.30);">
+
+              <!-- Card header -->
+              <div class="flex items-center justify-between px-5 py-3.5 border-b" style="border-color: oklch(0.72 0.16 70 / 0.15);">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-brand-500"></span>
+                  <span class="text-xs font-semibold tracking-widest uppercase" style="color: oklch(0.78 0.14 70);">Today's Deal</span>
+                </div>
+                <span class="text-xs px-2.5 py-1 rounded-full font-medium" style="background: oklch(0.72 0.16 70 / 0.15); color: oklch(0.78 0.14 70);">✦ Best value</span>
+              </div>
+
+              <!-- Destination visual -->
+              <div class="relative h-44 overflow-hidden" style="background: linear-gradient(145deg, oklch(0.18 0.05 245) 0%, oklch(0.14 0.04 255) 40%, oklch(0.20 0.06 230) 100%);">
+                <!-- Destination silhouette / abstraction -->
+                <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 100%; background: radial-gradient(ellipse at 60% 80%, oklch(0.35 0.08 245 / 0.5) 0%, transparent 55%), radial-gradient(ellipse at 20% 30%, oklch(0.72 0.16 70 / 0.12) 0%, transparent 40%);"></div>
+                <!-- Skyline abstract shapes -->
+                <svg viewBox="0 0 360 176" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute bottom-0 left-0 w-full" preserveAspectRatio="xMidYMax meet">
+                  <!-- Distant mountains / hills -->
+                  <path d="M0 176 L0 110 Q30 90 60 100 Q90 110 110 85 Q130 60 150 80 Q170 100 200 75 Q230 50 260 70 Q290 90 320 65 Q340 55 360 60 L360 176 Z" fill="oklch(0.22 0.04 240 / 0.7)"/>
+                  <!-- Mid-ground architecture -->
+                  <rect x="40" y="120" width="18" height="56" rx="1" fill="oklch(0.25 0.045 238)"/>
+                  <rect x="62" y="105" width="24" height="71" rx="1" fill="oklch(0.23 0.042 239)"/>
+                  <rect x="90" y="115" width="14" height="61" rx="1" fill="oklch(0.26 0.047 237)"/>
+                  <rect x="108" y="98" width="30" height="78" rx="1" fill="oklch(0.22 0.040 240)"/>
+                  <rect x="200" y="110" width="22" height="66" rx="1" fill="oklch(0.24 0.044 238)"/>
+                  <rect x="226" y="95" width="16" height="81" rx="1" fill="oklch(0.23 0.043 239)"/>
+                  <rect x="246" y="118" width="28" height="58" rx="1" fill="oklch(0.25 0.046 237)"/>
+                  <rect x="290" y="105" width="20" height="71" rx="1" fill="oklch(0.22 0.041 240)"/>
+                  <rect x="314" y="90" width="34" height="86" rx="1" fill="oklch(0.24 0.045 238)"/>
+                  <!-- Lit windows -->
+                  <rect x="67" y="112" width="4" height="4" rx="0.5" fill="oklch(0.72 0.16 70 / 0.8)"/>
+                  <rect x="75" y="112" width="4" height="4" rx="0.5" fill="oklch(0.72 0.16 70 / 0.5)"/>
+                  <rect x="67" y="122" width="4" height="4" rx="0.5" fill="oklch(0.72 0.16 70 / 0.6)"/>
+                  <rect x="113" y="105" width="5" height="4" rx="0.5" fill="oklch(0.72 0.16 70 / 0.7)"/>
+                  <rect x="122" y="105" width="5" height="4" rx="0.5" fill="oklch(0.72 0.16 70 / 0.4)"/>
+                  <rect x="113" y="115" width="5" height="4" rx="0.5" fill="oklch(0.72 0.16 70 / 0.65)"/>
+                  <rect x="230" y="103" width="4" height="4" rx="0.5" fill="oklch(0.72 0.16 70 / 0.75)"/>
+                  <rect x="230" y="113" width="4" height="4" rx="0.5" fill="oklch(0.72 0.16 70 / 0.5)"/>
+                  <rect x="318" y="98" width="5" height="5" rx="0.5" fill="oklch(0.72 0.16 70 / 0.8)"/>
+                  <rect x="327" y="98" width="5" height="5" rx="0.5" fill="oklch(0.72 0.16 70 / 0.55)"/>
+                  <!-- Stars -->
+                  <circle cx="80" cy="30" r="1" fill="oklch(0.90 0.005 75 / 0.7)"/>
+                  <circle cx="160" cy="20" r="1.2" fill="oklch(0.90 0.005 75 / 0.8)"/>
+                  <circle cx="240" cy="35" r="0.8" fill="oklch(0.90 0.005 75 / 0.6)"/>
+                  <circle cx="300" cy="18" r="1" fill="oklch(0.90 0.005 75 / 0.75)"/>
+                  <circle cx="50" cy="45" r="0.7" fill="oklch(0.90 0.005 75 / 0.5)"/>
+                  <!-- Moon -->
+                  <circle cx="320" cy="30" r="10" fill="oklch(0.85 0.04 80 / 0.25)"/>
+                  <circle cx="324" cy="28" r="8" fill="oklch(0.18 0.05 245 / 0.8)"/>
+                </svg>
+                <!-- Destination label -->
+                <div class="absolute top-3 left-4">
+                  <p class="text-xs font-medium" style="color: oklch(0.88 0.010 75 / 0.7);">Tonight's featured route</p>
+                </div>
+              </div>
+
+              <!-- Card body -->
+              <div class="px-5 py-4">
+                <div class="flex items-start justify-between gap-3 mb-3">
+                  <div>
+                    <h3 class="font-display text-xl leading-tight" style="color: oklch(0.96 0.006 75); font-style: italic;">New York → Tokyo</h3>
+                    <p class="text-xs mt-0.5" style="color: oklch(0.65 0.018 235);">Business Class · Round-trip · Oct 2025</p>
+                  </div>
+                  <div class="text-right shrink-0">
+                    <p class="text-2xl font-semibold leading-none" style="color: oklch(0.78 0.14 70);">62,500</p>
+                    <p class="text-xs mt-0.5" style="color: oklch(0.65 0.018 235);">Chase UR pts</p>
+                  </div>
+                </div>
+
+                <!-- Transfer path -->
+                <div class="rounded-xl px-4 py-3 mb-4" style="background: oklch(0.22 0.030 237); border: 1px solid oklch(0.72 0.16 70 / 0.10);">
+                  <p class="text-xs mb-2 font-medium" style="color: oklch(0.65 0.018 235);">Optimal transfer path:</p>
+                  <div class="flex items-center gap-1.5 flex-wrap">
+                    <span class="text-xs px-2 py-1 rounded font-medium" style="background: oklch(0.72 0.16 70 / 0.15); color: oklch(0.82 0.12 72);">Chase UR</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="oklch(0.65 0.018 235)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span class="text-xs px-2 py-1 rounded font-medium" style="background: oklch(0.72 0.16 70 / 0.15); color: oklch(0.82 0.12 72);">ANA Miles</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="oklch(0.65 0.018 235)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span class="text-xs px-2 py-1 rounded font-medium" style="background: oklch(0.26 0.04 240); color: oklch(0.88 0.010 75);">NH 008</span>
+                    <span class="ml-auto text-xs font-semibold" style="color: oklch(0.72 0.14 68);">2.8¢/pt</span>
+                  </div>
+                </div>
+
+                <!-- CTA inside card -->
+                <a href="#cta" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-semibold transition-all duration-200 hover:opacity-90"
+                   style="background: oklch(0.72 0.16 70); color: oklch(0.13 0.025 240);">
+                  Book this deal
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M8 3.5l3.5 3.5L8 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Floating badge -->
+            <div class="absolute -top-3 -right-3 z-20 px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg"
+                 style="background: oklch(0.26 0.04 240); border: 1px solid oklch(0.72 0.16 70 / 0.3); color: oklch(0.88 0.010 75);">
+              ✦ Refreshes at midnight
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /grid -->
+
+      <!-- Social proof strip -->
+      <div class="mt-20 pt-8 border-t border-surface-200/10 animate-fade-in delay-500">
+        <div class="flex flex-wrap items-center gap-x-10 gap-y-4">
+          <p class="text-xs font-medium uppercase tracking-widest" style="color: oklch(0.50 0.015 235);">Connects with</p>
+          <div class="flex flex-wrap items-center gap-x-8 gap-y-3">
+            {['Chase UR', 'Amex MR', 'Citi TYP', 'Delta SkyMiles', 'United MileagePlus', 'Hyatt', 'Marriott Bonvoy'].map(prog => (
+              <span class="text-sm font-medium" style={`color: oklch(0.60 0.015 235);`}>{prog}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /container -->
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       STATS — Impact numbers
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section style="background: oklch(0.16 0.026 239);">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 py-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        {[
+          { stat: '18+', label: 'loyalty programs connected' },
+          { stat: '3.1¢', label: 'average value per point' },
+          { stat: '1', label: 'curated deal per day, just for you' },
+          { stat: '< 60s', label: 'from login to bookable deal' },
+        ].map(({ stat, label }) => (
+          <div class="text-center">
+            <p class="font-display text-4xl sm:text-5xl mb-2" style="color: oklch(0.78 0.14 70); font-style: italic;">{stat}</p>
+            <p class="text-sm leading-snug" style="color: oklch(0.60 0.015 235);">{label}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section id="cta" class="py-20 md:py-28">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="rounded-2xl bg-brand-500 p-10 md:p-16 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white font-display">Ready to get started?</h2>
-        <p class="mt-4 text-lg text-white/80 max-w-xl mx-auto">Get in touch and see what we can do for you.</p>
-        <a href="mailto:hello@example.com" class="mt-8 inline-block px-8 py-3.5 bg-white text-surface-900 font-semibold rounded-lg hover:bg-surface-100 transition-colors text-base">
-          Contact Us
-        </a>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       HOW IT WORKS — 3 steps
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section id="how-it-works" style="background: oklch(0.13 0.025 240);">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 py-24 md:py-32">
+
+      <!-- Section header -->
+      <div class="max-w-2xl mb-16">
+        <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: oklch(0.72 0.14 70);">How Pointara works</p>
+        <h2 class="font-display text-4xl sm:text-5xl leading-tight" style="color: oklch(0.96 0.006 75); font-style: italic; font-weight: 400;">
+          No searching.<br>Just your next trip.
+        </h2>
+        <p class="mt-5 text-base leading-relaxed" style="color: oklch(0.60 0.015 235); max-width: 42ch;">
+          Every competitor makes you hunt. Pointara does the work — reading your real balances and finding the best redemption in the market today.
+        </p>
+      </div>
+
+      <!-- Steps -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        {[
+          {
+            num: '01',
+            title: 'Connect your accounts',
+            body: 'Securely link your Chase, Amex, Citi, airline, and hotel accounts. Pointara reads your exact point balances in real time — no manual entry, no spreadsheets.',
+            icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
+          },
+          {
+            num: '02',
+            title: 'We run the math',
+            body: 'Our engine cross-references live award availability with every transfer partner ratio across your programs, calculating true cents-per-point value for thousands of routes.',
+            icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>`,
+          },
+          {
+            num: '03',
+            title: 'Book one perfect deal',
+            body: 'Each day, Pointara surfaces one deal — the highest-value route you can book right now with what you actually have. One tap takes you directly to the booking page.',
+            icon: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>`,
+          },
+        ].map(({ num, title, body, icon }) => (
+          <div class="relative rounded-2xl p-7 card-amber-glow transition-all duration-300"
+               style="background: oklch(0.18 0.028 238);">
+            <!-- Step number -->
+            <p class="font-display text-6xl mb-6 leading-none select-none" style="color: oklch(0.72 0.16 70 / 0.12); font-style: italic;">{num}</p>
+            <!-- Icon -->
+            <div class="mb-4" style="color: oklch(0.78 0.14 70);" set:html={icon}></div>
+            <h3 class="font-display text-xl mb-3" style="color: oklch(0.96 0.006 75); font-weight: 400;">{title}</h3>
+            <p class="text-sm leading-relaxed" style="color: oklch(0.60 0.015 235);">{body}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       FEATURE DEEP-DIVES — alternating left/right
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section id="features" style="background: oklch(0.15 0.027 239);">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 py-24 md:py-32 space-y-28">
+
+      <!-- Feature 1: Transfer path optimizer -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <!-- Text -->
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: oklch(0.72 0.14 70);">Transfer path intelligence</p>
+          <h2 class="font-display text-3xl sm:text-4xl leading-tight mb-5" style="color: oklch(0.96 0.006 75); font-style: italic; font-weight: 400;">
+            The transfer math you'd never do yourself
+          </h2>
+          <p class="text-base leading-relaxed mb-6" style="color: oklch(0.60 0.015 235); max-width: 44ch;">
+            Chase Ultimate Rewards alone transfers to 14 partners. Multiply that by your Amex and Citi balances and you have hundreds of possible paths to any flight. Pointara tests all of them — and shows you the one that yields the most value per point, per dollar of taxes.
+          </p>
+          <ul class="space-y-3">
+            {[
+              'Live partner transfer ratios updated daily',
+              'Taxes + fees factored into true value calc',
+              'Alerts when a transfer bonus boosts your deal',
+              'Partner sweet-spot routing (e.g. ANA for JAL business)',
+            ].map(item => (
+              <li class="flex items-start gap-3 text-sm" style="color: oklch(0.70 0.018 235);">
+                <svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="7" stroke="oklch(0.72 0.16 70)" stroke-width="1"/>
+                  <path d="M5 8l2 2 4-4" stroke="oklch(0.72 0.16 70)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <!-- Visual: transfer path UI mock -->
+        <div class="rounded-2xl p-6 card-amber-glow" style="background: oklch(0.18 0.028 238);">
+          <p class="text-xs font-semibold uppercase tracking-widest mb-5" style="color: oklch(0.65 0.018 235);">Pointara transfer analysis</p>
+          <!-- Route rows -->
+          {[
+            { from: 'Chase UR → United', pts: '60,000', val: '1.5¢', note: 'Standard rate' },
+            { from: 'Chase UR → ANA → Biz', pts: '55,000', val: '3.1¢', note: '✦ Recommended', highlight: true },
+            { from: 'Amex MR → ANA', pts: '55,000', val: '2.8¢', note: 'Alt if UR low' },
+            { from: 'Citi TYP → Turkish', pts: '45,000', val: '2.2¢', note: 'Economy only' },
+          ].map(({ from, pts, val, note, highlight }) => (
+            <div class={`flex items-center justify-between gap-3 px-4 py-3 rounded-xl mb-2 ${highlight ? 'border' : 'opacity-70'}`}
+                 style={highlight ? `background: oklch(0.72 0.16 70 / 0.08); border-color: oklch(0.72 0.16 70 / 0.35);` : `background: oklch(0.22 0.030 237);`}>
+              <div>
+                <p class="text-sm font-medium" style={`color: ${highlight ? 'oklch(0.88 0.010 75)' : 'oklch(0.70 0.018 235)'};`}>{from}</p>
+                <p class="text-xs mt-0.5" style={`color: ${highlight ? 'oklch(0.78 0.14 70)' : 'oklch(0.50 0.015 235)'};`}>{note}</p>
+              </div>
+              <div class="text-right shrink-0">
+                <p class="text-sm font-semibold" style={`color: ${highlight ? 'oklch(0.78 0.14 70)' : 'oklch(0.65 0.018 235)'};`}>{val}<span class="text-xs font-normal">/pt</span></p>
+                <p class="text-xs" style="color: oklch(0.50 0.015 235);">{pts} pts</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Feature 2: Real balance sync -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <!-- Visual: balance dashboard mock -->
+        <div class="order-2 lg:order-1 rounded-2xl p-6 card-amber-glow" style="background: oklch(0.18 0.028 238);">
+          <p class="text-xs font-semibold uppercase tracking-widest mb-5" style="color: oklch(0.65 0.018 235);">Your live balance snapshot</p>
+          {[
+            { prog: 'Chase Ultimate Rewards', pts: '148,200', icon: '◈', pct: 78 },
+            { prog: 'Amex Membership Rewards', pts: '92,400', icon: '◆', pct: 62 },
+            { prog: 'Citi ThankYou Points', pts: '63,750', icon: '◇', pct: 45 },
+            { prog: 'Delta SkyMiles', pts: '41,000', icon: '▲', pct: 30 },
+            { prog: 'Hyatt World of Hyatt', pts: '28,500', icon: '◉', pct: 22 },
+          ].map(({ prog, pts, icon, pct }) => (
+            <div class="flex items-center gap-4 mb-4">
+              <span class="text-base shrink-0 w-6 text-center" style="color: oklch(0.72 0.14 70);">{icon}</span>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between mb-1">
+                  <p class="text-xs font-medium truncate" style="color: oklch(0.75 0.018 235);">{prog}</p>
+                  <p class="text-xs font-semibold ml-2 shrink-0" style="color: oklch(0.88 0.010 75);">{pts}</p>
+                </div>
+                <div class="h-1.5 rounded-full overflow-hidden" style="background: oklch(0.22 0.030 237);">
+                  <div class="h-full rounded-full transition-all" style={`width: ${pct}%; background: linear-gradient(to right, oklch(0.72 0.16 70), oklch(0.62 0.15 68));`}></div>
+                </div>
+              </div>
+            </div>
+          ))}
+          <div class="mt-5 pt-4 border-t flex items-center justify-between" style="border-color: oklch(0.72 0.16 70 / 0.12);">
+            <p class="text-xs" style="color: oklch(0.55 0.015 235);">Total combined value (est.)</p>
+            <p class="font-display text-lg" style="color: oklch(0.78 0.14 70); font-style: italic;">~$11,200</p>
+          </div>
+        </div>
+        <!-- Text -->
+        <div class="order-1 lg:order-2">
+          <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: oklch(0.72 0.14 70);">Real-time balance sync</p>
+          <h2 class="font-display text-3xl sm:text-4xl leading-tight mb-5" style="color: oklch(0.96 0.006 75); font-style: italic; font-weight: 400;">
+            Every program you hold, one living snapshot
+          </h2>
+          <p class="text-base leading-relaxed mb-6" style="color: oklch(0.60 0.015 235); max-width: 44ch;">
+            AwardWallet requires manual updates. Pointara reads your live balances directly, so when you earn miles on Tuesday's flight, your deal on Wednesday already factors them in.
+          </p>
+          <ul class="space-y-3">
+            {[
+              'Automatic balance refresh every 24 hours',
+              'Alerts for expiring miles before you lose them',
+              'Net worth view: your total points in real dollars',
+              'Covers credit card, airline, and hotel programs',
+            ].map(item => (
+              <li class="flex items-start gap-3 text-sm" style="color: oklch(0.70 0.018 235);">
+                <svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="7" stroke="oklch(0.72 0.16 70)" stroke-width="1"/>
+                  <path d="M5 8l2 2 4-4" stroke="oklch(0.72 0.16 70)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Feature 3: Daily deal intelligence -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <!-- Text -->
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: oklch(0.72 0.14 70);">Personalized award intelligence</p>
+          <h2 class="font-display text-3xl sm:text-4xl leading-tight mb-5" style="color: oklch(0.96 0.006 75); font-style: italic; font-weight: 400;">
+            One deal. Yours. Better than you'd find yourself.
+          </h2>
+          <p class="text-base leading-relaxed mb-6" style="color: oklch(0.60 0.015 235); max-width: 44ch;">
+            Roame and Point.me show you what's theoretically possible. Pointara shows you what you can actually book today — with the specific currencies in your wallet, at real-time availability, filtered to departure airports you've told us you use.
+          </p>
+          <ul class="space-y-3">
+            {[
+              'Learns your preferred cabin class and regions',
+              'Filters to realistic departure airports',
+              'Surfaces partner fare classes others miss',
+              'One-click deep link to the booking portal',
+            ].map(item => (
+              <li class="flex items-start gap-3 text-sm" style="color: oklch(0.70 0.018 235);">
+                <svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="7" stroke="oklch(0.72 0.16 70)" stroke-width="1"/>
+                  <path d="M5 8l2 2 4-4" stroke="oklch(0.72 0.16 70)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <!-- Visual: notification / deal card -->
+        <div class="space-y-3">
+          <!-- Push notification mock -->
+          <div class="rounded-2xl px-5 py-4 flex items-start gap-4" style="background: oklch(0.22 0.030 237); border: 1px solid oklch(0.72 0.16 70 / 0.15);">
+            <span class="w-8 h-8 rounded-lg shrink-0 flex items-center justify-center text-base font-bold" style="background: oklch(0.72 0.16 70); color: oklch(0.13 0.025 240);">P</span>
+            <div>
+              <p class="text-xs font-semibold mb-0.5" style="color: oklch(0.88 0.010 75);">Pointara · Today's deal is live ✦</p>
+              <p class="text-sm leading-snug" style="color: oklch(0.65 0.018 235);">NYC → Tokyo in Business — 62,500 Chase UR pts. Seat 3A open. Departure Oct 14.</p>
+              <p class="text-xs mt-1" style="color: oklch(0.50 0.015 235);">Just now</p>
+            </div>
+          </div>
+          <!-- Preference settings mock -->
+          <div class="rounded-2xl p-5 card-amber-glow" style="background: oklch(0.18 0.028 238);">
+            <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: oklch(0.65 0.018 235);">Your deal preferences</p>
+            <div class="space-y-3">
+              {[
+                { label: 'Cabin', value: 'Business & First' },
+                { label: 'Departure airports', value: 'JFK, EWR, LGA' },
+                { label: 'Regions', value: 'Asia, Europe, Caribbean' },
+                { label: 'Lead time', value: '6 weeks – 6 months' },
+              ].map(({ label, value }) => (
+                <div class="flex items-center justify-between text-sm">
+                  <span style="color: oklch(0.55 0.015 235);">{label}</span>
+                  <span class="font-medium" style="color: oklch(0.88 0.010 75);">{value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       WHY US — Comparison callout
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section style="background: oklch(0.13 0.025 240);">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8 py-24 md:py-28">
+      <div class="text-center mb-14">
+        <h2 class="font-display text-4xl sm:text-5xl leading-tight" style="color: oklch(0.96 0.006 75); font-style: italic; font-weight: 400;">
+          Not another search tool.
+        </h2>
+        <p class="mt-4 text-base max-w-md mx-auto" style="color: oklch(0.60 0.015 235);">
+          Every competitor requires you to already know what you're looking for. Pointara does the thinking for you.
+        </p>
+      </div>
+
+      <!-- Comparison table -->
+      <div class="rounded-2xl overflow-hidden card-amber-glow" style="background: oklch(0.18 0.028 238);">
+        <!-- Header row -->
+        <div class="grid grid-cols-4 text-xs font-semibold uppercase tracking-widest px-5 py-3 border-b" style="border-color: oklch(0.72 0.16 70 / 0.12); color: oklch(0.55 0.015 235);">
+          <span class="col-span-2">Feature</span>
+          <span class="text-center" style="color: oklch(0.65 0.018 235);">Others</span>
+          <span class="text-center" style="color: oklch(0.78 0.14 70);">Pointara</span>
+        </div>
+        {[
+          ['Reads your actual balances in real time', false, true],
+          ['Handles transfer partner math automatically', false, true],
+          ['One curated deal, personalised to you', false, true],
+          ['No searching or setup knowledge needed', false, true],
+          ['Live award seat availability check', 'partial', true],
+          ['Expiring miles alerts', 'partial', true],
+          ['Deep-links direct to booking', false, true],
+        ].map(([feat, them, us]) => (
+          <div class="grid grid-cols-4 items-center px-5 py-3.5 border-b last:border-0" style="border-color: oklch(0.72 0.16 70 / 0.08);">
+            <span class="col-span-2 text-sm" style="color: oklch(0.70 0.018 235);">{feat}</span>
+            <div class="flex justify-center">
+              {them === true
+                ? <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9l3 3 7-7" stroke="oklch(0.55 0.015 235)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                : them === 'partial'
+                ? <span class="text-xs px-2 py-0.5 rounded" style="background: oklch(0.22 0.030 237); color: oklch(0.60 0.015 235);">Partial</span>
+                : <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5 5l8 8M13 5l-8 8" stroke="oklch(0.40 0.02 10)" stroke-width="1.5" stroke-linecap="round"/></svg>
+              }
+            </div>
+            <div class="flex justify-center">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 9l3 3 7-7" stroke="oklch(0.72 0.16 70)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PRICING
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section id="pricing" style="background: oklch(0.15 0.027 239);">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8 py-24 md:py-28">
+      <div class="text-center mb-14">
+        <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: oklch(0.72 0.14 70);">Pricing</p>
+        <h2 class="font-display text-4xl sm:text-5xl leading-tight" style="color: oklch(0.96 0.006 75); font-style: italic; font-weight: 400;">
+          One trip pays for years.
+        </h2>
+        <p class="mt-4 text-base max-w-sm mx-auto" style="color: oklch(0.60 0.015 235);">
+          A single business-class deal found through Pointara is worth 50× the annual subscription.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+
+        <!-- Free -->
+        <div class="rounded-2xl p-7" style="background: oklch(0.18 0.028 238); border: 1px solid oklch(0.72 0.16 70 / 0.15);">
+          <p class="text-xs font-semibold uppercase tracking-widest mb-3" style="color: oklch(0.55 0.015 235);">Explorer</p>
+          <p class="font-display text-4xl mb-1" style="color: oklch(0.96 0.006 75); font-style: italic;">Free</p>
+          <p class="text-sm mb-7" style="color: oklch(0.55 0.015 235);">Forever — no card required</p>
+          <ul class="space-y-2.5 mb-8">
+            {[
+              'Connect up to 3 loyalty accounts',
+              'Weekly deal (Monday edition)',
+              'Balance snapshot dashboard',
+              'Expiring miles alerts',
+            ].map(f => (
+              <li class="flex items-start gap-2.5 text-sm" style="color: oklch(0.65 0.018 235);">
+                <svg class="shrink-0 mt-0.5" width="15" height="15" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="7" stroke="oklch(0.55 0.015 235)" stroke-width="1"/>
+                  <path d="M5 8l2 2 4-4" stroke="oklch(0.55 0.015 235)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                {f}
+              </li>
+            ))}
+          </ul>
+          <a href="#cta" class="flex items-center justify-center w-full py-3 rounded-xl text-sm font-semibold border transition-colors duration-200 hover:bg-surface-200/10"
+             style="border-color: oklch(0.72 0.16 70 / 0.25); color: oklch(0.88 0.010 75);">
+            Start free
+          </a>
+        </div>
+
+        <!-- Pro — highlighted -->
+        <div class="rounded-2xl p-7 card-amber-glow relative overflow-hidden" style="background: oklch(0.18 0.028 238); border: 1px solid oklch(0.72 0.16 70 / 0.40);">
+          <!-- Badge -->
+          <div class="absolute top-4 right-4 px-2.5 py-1 rounded-full text-xs font-semibold" style="background: oklch(0.72 0.16 70); color: oklch(0.13 0.025 240);">Most popular</div>
+          <p class="text-xs font-semibold uppercase tracking-widest mb-3" style="color: oklch(0.78 0.14 70);">Concierge</p>
+          <div class="flex items-baseline gap-1 mb-1">
+            <p class="font-display text-4xl" style="color: oklch(0.96 0.006 75); font-style: italic;">$9</p>
+            <span class="text-sm" style="color: oklch(0.60 0.015 235);">/month</span>
+          </div>
+          <p class="text-sm mb-7" style="color: oklch(0.55 0.015 235);">or $79/year (save 27%)</p>
+          <ul class="space-y-2.5 mb-8">
+            {[
+              'Unlimited loyalty accounts',
+              'Daily curated deal — every morning',
+              'Full transfer path analysis',
+              'Live award seat availability',
+              'Real-time balance sync',
+              'Priority deal notifications',
+              'Deep-link to booking portals',
+            ].map(f => (
+              <li class="flex items-start gap-2.5 text-sm" style="color: oklch(0.75 0.018 235);">
+                <svg class="shrink-0 mt-0.5" width="15" height="15" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="7" stroke="oklch(0.72 0.16 70)" stroke-width="1"/>
+                  <path d="M5 8l2 2 4-4" stroke="oklch(0.72 0.16 70)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                {f}
+              </li>
+            ))}
+          </ul>
+          <a href="#cta" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-semibold transition-all duration-200 hover:opacity-90 hover:scale-[1.01]"
+             style="background: oklch(0.72 0.16 70); color: oklch(0.13 0.025 240); box-shadow: 0 4px 20px oklch(0.72 0.16 70 / 0.30);">
+            Start my free trial
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M8 3.5l3.5 3.5L8 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <p class="text-center text-xs mt-3" style="color: oklch(0.50 0.015 235);">14-day free trial · Cancel anytime</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       TESTIMONIAL / TRUST QUOTE
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section style="background: oklch(0.13 0.025 240);">
+    <div class="max-w-4xl mx-auto px-5 sm:px-8 py-20 md:py-24 text-center">
+      <!-- Large decorative quote -->
+      <p class="font-display text-8xl leading-none mb-4 select-none" style="color: oklch(0.72 0.16 70 / 0.20); font-style: italic;">"</p>
+      <blockquote class="font-display text-2xl sm:text-3xl leading-snug mb-8" style="color: oklch(0.88 0.010 75); font-style: italic; font-weight: 400; margin-top: -2.5rem;">
+        I have 6 cards and 400k+ points across 9 programs. Before Pointara I had no idea what I could actually book. The first deal it showed me — ANA business class to Tokyo — would have taken me six hours to find on my own. I booked it in four minutes.
+      </blockquote>
+      <div class="flex items-center justify-center gap-3">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center font-semibold text-sm shrink-0" style="background: oklch(0.72 0.16 70 / 0.15); color: oklch(0.78 0.14 70);">MK</div>
+        <div class="text-left">
+          <p class="text-sm font-medium" style="color: oklch(0.88 0.010 75);">Marcus K.</p>
+          <p class="text-xs" style="color: oklch(0.55 0.015 235);">Chase Sapphire Reserve + Amex Platinum holder · Early beta user</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       FINAL CTA
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section id="cta" class="relative overflow-hidden grain-overlay" style="background: oklch(0.18 0.028 238);">
+    <!-- Amber glow -->
+    <div style="position: absolute; top: -30%; left: 50%; transform: translateX(-50%); width: 80%; height: 200%; background: radial-gradient(ellipse at 50% 30%, oklch(0.72 0.16 70 / 0.10) 0%, transparent 55%); pointer-events: none;"></div>
+    <div class="relative z-10 max-w-3xl mx-auto px-5 sm:px-8 py-24 md:py-32 text-center">
+      <p class="text-xs font-semibold uppercase tracking-widest mb-5" style="color: oklch(0.72 0.14 70);">Early access — limited spots</p>
+      <h2 class="font-display text-4xl sm:text-5xl md:text-6xl leading-tight mb-6" style="color: oklch(0.96 0.006 75); font-style: italic; font-weight: 400;">
+        Your next first-class seat<br>is already in your wallet.
+      </h2>
+      <p class="text-base leading-relaxed mb-10 mx-auto" style="color: oklch(0.60 0.015 235); max-width: 40ch;">
+        Join the waitlist and get your first personalized deal the moment we open — no setup, no searching, no guessing.
+      </p>
+
+      <!-- Email capture -->
+      <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-5" onsubmit="return false;">
+        <input
+          type="email"
+          placeholder="your@email.com"
+          class="flex-1 px-5 py-3.5 rounded-full text-sm outline-none border transition-colors duration-200"
+          style="background: oklch(0.22 0.030 237); border-color: oklch(0.72 0.16 70 / 0.20); color: oklch(0.88 0.010 75); caret-color: oklch(0.72 0.16 70);"
+        />
+        <button type="submit"
+          class="px-7 py-3.5 rounded-full text-sm font-semibold whitespace-nowrap transition-all duration-200 hover:opacity-90 hover:scale-[1.02] active:scale-[0.98]"
+          style="background: oklch(0.72 0.16 70); color: oklch(0.13 0.025 240); box-shadow: 0 4px 20px oklch(0.72 0.16 70 / 0.30);">
+          Claim my spot
+        </button>
+      </form>
+      <p class="text-xs" style="color: oklch(0.45 0.015 235);">No spam. No credit card. Cancel anytime after launch.</p>
+
+      <!-- Bottom tagline -->
+      <p class="mt-16 font-display text-xl" style="color: oklch(0.72 0.16 70 / 0.50); font-style: italic;">
+        Your points. Your perfect deal. Every day.
+      </p>
+    </div>
+  </section>
+
 </Base>
