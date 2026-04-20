@@ -1,0 +1,20 @@
+# Your New Business
+
+> URL: https://points-travel-deals.onrender.com
+
+> An app that combines knowledge of all of your travel points and knowledge of all flight flights and hotels and gives you a daily deal that is very customized to the point points that you have to your name and takes into account the best ways to transfer points to achieve that deal
+
+## About
+
+Your New Business is an AI-powered business. This file provides a brief overview for
+language model crawlers and AI assistants.
+
+## Pages
+
+- /: Home — learn about Your New Business and get started
+- /blog: Blog — articles, updates, and insights
+- /blog/[slug]: Individual blog posts
+
+## Contact
+
+For inquiries, please visit our website.
