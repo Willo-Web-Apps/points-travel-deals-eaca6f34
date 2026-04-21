@@ -1,4 +1,4 @@
-# Design DNA — Pointara
+# Design DNA — Redeemly
 
 ## Visual Personality: warm-luxurious
 ## Layout: product-led

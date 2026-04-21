@@ -1,20 +1,19 @@
-# Your New Business
+# Redeemly
 
-> URL: https://points-travel-deals.onrender.com
+> URL: https://redeemly.bywillo.ai
 
-> An app that combines knowledge of all of your travel points and knowledge of all flight flights and hotels and gives you a daily deal that is very customized to the point points that you have to your name and takes into account the best ways to transfer points to achieve that deal
+> Redeemly reads your exact loyalty balances, runs the transfer math, and surfaces the one best trip you can book right now — no searching required.
 
 ## About
 
-Your New Business is an AI-powered business. This file provides a brief overview for
-language model crawlers and AI assistants.
+Redeemly is an AI-powered travel points optimizer that delivers one personalized daily award deal based on your exact points balances and the best transfer paths available.
 
 ## Pages
 
-- /: Home — learn about Your New Business and get started
-- /blog: Blog — articles, updates, and insights
+- /: Home — learn about Redeemly and get early access
+- /blog: Blog — articles, updates, and insights on travel points optimization
 - /blog/[slug]: Individual blog posts
 
 ## Contact
 
-For inquiries, please visit our website.
+For inquiries, please visit our website at redeemly.bywillo.ai.
